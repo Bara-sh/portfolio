@@ -215,8 +215,10 @@ function useTypingEffect(words: string[], speed = 90, pause = 1800): string {
 }
 
 // Fixed useReveal: returns [RefObject<HTMLElement>, boolean] — no more union type confusion
-function useReveal(threshold = 0.12): [React.RefObject<HTMLElement>, boolean] {
-  const ref = useRef<HTMLElement>(null);
+function useReveal(
+  threshold = 0.12
+): [React.RefObject<HTMLElement | null>, boolean] {
+  const ref = useRef<HTMLElement | null>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {

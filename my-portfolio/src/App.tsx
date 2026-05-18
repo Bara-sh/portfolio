@@ -579,7 +579,7 @@ function Hero(){
               boxShadow: "0 0 60px rgba(0,245,255,0.1), 0 0 120px rgba(168,85,247,0.06)",
             }}>
               {/* Put your photo at /public/profile.png */}
-              <img src="/public/my.jpeg" alt="Bara Shurab"
+             <img src="/my.jpeg" alt="Bara Shurab" 
                 style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 onError={(e) => {
                   e.currentTarget.style.display = "none";
